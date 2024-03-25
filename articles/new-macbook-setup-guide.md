@@ -185,7 +185,7 @@ rustup self uninstall
 
 | 項目     | DL リンク／方法                           | 備考                      |
 | -------- | ----------------------------------------- | ------------------------- |
-| VScode   | https://code.visualstudio.com             | ⚠️ [設定](./Tips)         |
+| VScode   | https://code.visualstudio.com             | ⚠️ [設定](#vscode)        |
 | Xcode    | https://developer.apple.com/jp/xcode/     |                           |
 | Karabina | https://karabiner-elements.pqrs.org       | キーボード（Keycrone 用） |
 | Clipy    | https://clipy-app.com                     | クリップボードの履歴      |
@@ -194,3 +194,74 @@ rustup self uninstall
 | Figma    | https://www.figma.com/                    |                           |
 | Chrome   | https://www.google.com/intl/ja_jp/chrome/ |                           |
 | Docker   | https://www.docker.com/get-started/       |                           |
+
+# Tips
+
+### VScode
+
+#### `code .`が使えない
+
+1. Visual Studio Code を起動
+2. コマンドパレットを開く `cmd` + `shift` + `p`
+3. `"Shell Command: Install 'code' command in PATH"`を選択
+
+#### Setting.json
+
+1. Visual Studio Code を起動
+2. コマンドパレットを開く `cmd` + `shift` + `p`
+3. 検索 `setting.json
+4.
+
+```json
+{
+  "files.associations": {
+    "*.css": "postcss"
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "html.format.unformatted": "",
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  "editor.formatOnSave": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "git.autofetch": true,
+
+  "git.confirmSync": false,
+
+  "[postcss]": {},
+
+  "editor.accessibilityPageSize": 12,
+
+  "editor.fontSize": 14,
+
+  "terminal.integrated.fontSize": 14,
+
+  "debug.console.fontSize": 14,
+
+  "markdown.preview.fontSize": 16,
+
+  "files.exclude": {
+    "**/.git": false,
+
+    "**/.svn": true,
+
+    "**/.hg": true,
+
+    "**/CVS": true,
+
+    "**/.DS_Store": true,
+
+    "**/Thumbs.db": true
+  }
+}
+```
